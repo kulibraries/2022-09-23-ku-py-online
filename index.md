@@ -10,13 +10,13 @@ language: "en"     # lowercase two-letter ISO language code such as "fr" (see ht
 latitude: "38.973148"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-95.238251"       # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "September 23 & 30 2022"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9:00 am - 12:30 noon CDT (UTC-5)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+humantime: "8:30 am - 12:00 noon CDT (UTC-5)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
 startdate: 20220923      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 20220930        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Boryana Koseva", "Kaylen Dwyer"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+instructor: ["Boryana Koseva, PhD", "Kaylen Dwyer"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Jamene Brooks-Kieffer", "Other helpers TBD"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["jamenebk@ku.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+collaborative_notes: https://pad.carpentries.org/2022-09-23-ku-py-online # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -298,7 +298,7 @@ available at https://codimd.carpentries.org
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+We will use this <a href="{{ page.collaborative_notes }}" target="_blank">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 <hr/>
 {% endif %}
@@ -392,17 +392,16 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in 
   {% if site.carpentry == "swc" %}
   Software Carpentry
   {% elsif site.carpentry == "dc" %}
-  Data Carpentry
+  this
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+  you will need access to an up-to-date web browser. We are working to provide remote access to Python and the workshop data, but if we are unable to do so you will receive installation instruction for Python in a separate email.
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
@@ -427,7 +426,6 @@ to include the relevant installation instrucctions.
 {% comment %}
 These are the installation instructions for the tools used
 during the workshop.
-{% endcomment %}
 
 {% if site.carpentry == "swc" %}
 {% include swc/setup.html %}
@@ -440,3 +438,4 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+{% endcomment %}

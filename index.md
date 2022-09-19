@@ -401,7 +401,7 @@ please preview your site before committing, and make sure to run
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to an up-to-date web browser. We are working to provide remote access to Python and the workshop data, but if we are unable to do so you will receive installation instruction for Python in a separate email.
+  you will need access to an up-to-date web browser. We will access Python and the workshop data through remote computing instances. You do not need to install Python on your computer.
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
